@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "required": [
+        "category",
+        "risk_level",
+        "summary",
+        "steps",
+        "cautions",
+        "disclaimer"
+    ],
+    "properties": {
+        "category": {
+            "type": "string",
+            "enum": [
+                "stress",
+                "sleep",
+                "nutrition",
+                "activity",
+                "mood"
+            ]
+        },
+        "risk_level": {
+            "type": "string",
+            "enum": [
+                "low",
+                "moderate",
+                "high"
+            ]
+        },
+        "summary": {
+            "type": "string"
+        },
+        "steps": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "title",
+                    "how",
+                    "duration"
+                ],
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "how": {
+                        "type": "string"
+                    },
+                    "duration": {
+                        "type": "string"
+                    },
+                    "evidence_hint": {
+                        "type": "string"
+                    }
+                }
+            },
+            "minItems": 2,
+            "maxItems": 5
+        },
+        "cautions": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "disclaimer": {
+            "type": "string"
+        }
+    }
+}

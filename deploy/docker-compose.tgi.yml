@@ -1,0 +1,13 @@
+# Docker Compose for TGI (Text Generation Inference)
+# This file is optional, used only when deploying GPU instances (e.g., Paperspace)
+# Example model mount and port exposure will be added later.
+version: "3"
+services:
+  tgi:
+    image: ghcr.io/huggingface/text-generation-inference:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - /data/models:/data
+    command:
+      - "--model-id=/data/llama3-8b-instruct"

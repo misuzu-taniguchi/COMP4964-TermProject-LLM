@@ -1,0 +1,2 @@
+{"opt":"Reduce stress","txt":"Busy week and irregular sleep","expect_cat":"stress"}
+{"opt":"Improve sleep","txt":"Coffee at 5pm and can’t fall asleep","expect_cat":"sleep"}
