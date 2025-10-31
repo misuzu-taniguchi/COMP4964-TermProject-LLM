@@ -24,7 +24,6 @@ def infer_tgi(option: str, text: str):
         txt = out["generated_text"]
     else:
         txt = out
-    # 最低限のJSON整形（失敗時はそのまま返す）
     try:
         return json.loads(txt)
     except Exception:
