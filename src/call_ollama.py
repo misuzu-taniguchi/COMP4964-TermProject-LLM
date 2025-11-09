@@ -20,11 +20,11 @@ MODEL_NAME = os.getenv("OLLAMA_MODEL", "qwen2.5:0.5b-instruct")
 
 # Generation settings (balance between speed and quality)
 GEN_OPTIONS = {
-    "temperature": 0.1,
+    "temperature": 0.2,
     "repeat_penalty": 1.1,
     "top_p": 0.9,
-    "num_predict": 140,
-    "num_ctx": 256,
+    "num_predict": 80,
+    "num_ctx": 192,
     "seed": 7,
 }
 STOP_TOKENS = ["}\n", "}\r", "}\r\n"]
@@ -92,7 +92,7 @@ def infer_from_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
     }
 
     try:
-        r = requests.post(f"{OLLAMA_HOST}/api/chat", json=body, timeout=30)
+        r = requests.post(f"{OLLAMA_HOST}/api/chat", json=body, timeout=60)
         r.raise_for_status()
         res = r.json()
         content = res.get("message", {}).get("content", "") or res.get("response", "")
