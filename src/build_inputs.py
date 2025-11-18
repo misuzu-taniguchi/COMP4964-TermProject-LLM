@@ -1,3 +1,4 @@
+# The code was developed with assistance from ChatGPT.
 # build_inputs.py
 """
 Builds structured input messages for Ollama's /api/chat endpoint (Qwen 0.5B Instruct).

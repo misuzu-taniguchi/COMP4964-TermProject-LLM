@@ -1,3 +1,4 @@
+# The code was developed with assistance from ChatGPT.
 # call_ollama.py
 """
 Send structured chat requests to Ollama (Qwen 0.5B Instruct).

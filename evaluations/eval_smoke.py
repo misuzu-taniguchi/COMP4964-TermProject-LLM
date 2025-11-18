@@ -1,3 +1,4 @@
+# The code was developed with assistance from ChatGPT.
 """
 Smoke test for LLM output structure.
 

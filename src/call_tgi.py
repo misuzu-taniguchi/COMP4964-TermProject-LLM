@@ -1,3 +1,4 @@
+# The code was developed with assistance from ChatGPT.
 import os, requests, json
 from build_inputs import build_inputs
 
